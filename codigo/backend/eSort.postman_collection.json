@@ -1,0 +1,808 @@
+{
+	"info": {
+		"_postman_id": "d335a1dd-3933-455b-8839-60d177721cb7",
+		"name": "eSort",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "CriarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n          \"email\": \"Teste@Teste.com\",\r\n      \"senha\": \"1234\",\r\n      \"nome\": \"Teste\",\r\n      \"idade\": 18,\r\n      \"peso\": 71,\r\n      \"genero\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObterUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id\":1,\r\n   \"nome\":\"Laerte\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sala",
+			"item": [
+				{
+					"name": "Participante",
+					"item": [
+						{
+							"name": "CriarParticipante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\" : \"Usuario\",\r\n    \"userId\": 2,\r\n    \"salaId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/participant/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"participant",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ObterParticipante",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/participant/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"participant",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteParticipante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/participant/delete/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"participant",
+										"delete",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateParticipante",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/participant/update/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"participant",
+										"update",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkRoom",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/participants/rooms/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"participants",
+										"rooms",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CriarSala",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Pelada 03\",\r\n    \"descricao\" : \"Pelada Teste\",\r\n    \"esporte\" : \"Futsal\",\r\n    \"public\": false,\r\n    \"numParticipantes\": 1,\r\n    \"cidade\": \"BH\",\r\n    \"usuarioId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/room/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObterSalas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/room/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSala",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/room/delete/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSala",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/room/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evento",
+			"item": [
+				{
+					"name": "CriarEvento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\" : \"Pelada 03\",\r\n\"quantidade\":0,\r\n\"quantidadeMax\":10,\r\n\"local\":\"BH\",\r\n\"valor\":\"15\",\r\n\"status\":\"Livre\",\r\n\"usuarioId\":10,\r\n\"salaId\":3,\r\n\"esporteId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/event/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObterEvento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/event/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"event",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEvento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/room/delete/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEvento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/room/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"room",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Esporte",
+			"item": [
+				{
+					"name": "Posicao",
+					"item": [
+						{
+							"name": "CriarEsporte",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\" : \"Lol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/sport/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sport",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ObterEsporte",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/sport/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sport",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteEsporte",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/sport/delete/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sport",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateEsporte",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 2,\r\n    \"nome\": \"Futsal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/sport/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sport",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CriarEsporte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Lol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/sport/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObterEsporte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sport/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEsporte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sport/delete/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEsporte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 2,\r\n    \"nome\": \"Futsal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/sport/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipe",
+			"item": [
+				{
+					"name": "Membros",
+					"item": [
+						{
+							"name": "CriarMembro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\" : \"Membro 2\",\r\n    \"userId\": \"1\",\r\n    \"equipeId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/member/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"member",
+										"save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ObterMembro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/member/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"member",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteMembro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/member/delete/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"member",
+										"delete",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateMembro",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/member/update/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"member",
+										"update",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortMembers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"participantes\":[\r\n    {\r\n         \"nome\" : \"Membro um\",\r\n         \"userId\": \"1\"\r\n    },\r\n    { \r\n        \"nome\" : \"Membro doi\",\r\n        \"userId\": \"1\"\r\n        },\r\n         { \r\n        \"nome\" : \"Membro tre\",\r\n        \"userId\": \"1\"\r\n        }, { \r\n        \"nome\" : \"Membro qua\",\r\n        \"userId\": \"1\"\r\n        },\r\n         { \r\n        \"nome\" : \"Membro cin\",\r\n        \"userId\": \"1\"\r\n        },\r\n         { \r\n        \"nome\" : \"Membro 6\",\r\n        \"userId\": \"1\"\r\n        }\r\n],\r\n\"maxEquipe\" : 2,\r\n\"equipes\" : [3,4,5]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/member/sort/save",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"member",
+										"sort",
+										"save"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CriarEquipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Time Temp3\",\r\n    \"eventoId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/team/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObterEquipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/team/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEquipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/team/delete/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEquipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/team/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
