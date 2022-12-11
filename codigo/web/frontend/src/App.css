@@ -1,0 +1,50 @@
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(243, 241, 241);
+}
+
+.app-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register-container {
+  padding: 10px 20px;
+  width: max-content;
+  height: max-content;
+  margin-top: 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  padding: 2px 5px;
+  display: block;
+  margin: 10px;
+  margin-left: 293px;
+  width: 150px;
+  background-color: #36ace2;
+  color: white;
+}
+
+.lista-de-salas{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-card{
+  width: 80%;
+  padding: 20px;
+}
